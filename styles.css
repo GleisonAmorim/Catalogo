@@ -1,250 +1,492 @@
+/* =====================================================
+   CONFIGURAÇÕES GERAIS DA PÁGINA
+   ===================================================== */
+
+/* Define a aparência básica de todo o site */
 body {
+
+    /* Repete a imagem de fundo, caso exista */
     background-repeat: repeat;
+
+    /* Faz a imagem de fundo ocupar toda a tela */
     background-size: cover;
+
+    /* Fonte padrão do site */
     font-family: "Times New Roman", serif;
+
+    /* Remove as margens e espaçamentos padrão do navegador */
     margin: 0;
     padding: 0;
+
+    /* Faz com que padding e borda sejam considerados no tamanho do elemento */
     box-sizing: border-box;
+
+    /* Empurra o conteúdo para baixo para não ficar escondido atrás do cabeçalho fixo */
     margin-top: 70px;
     padding-top: 80px;
 }
 
+
+/* =====================================================
+   CABEÇALHO
+   ===================================================== */
+
 header {
+
+    /* Cor de fundo */
     background-color: black;
+
+    /* Cor do texto */
     color: white;
+
+    /* Espaçamento interno */
     padding: 2px 0;
+
+    /* Centraliza o texto */
     text-align: center;
+
+    /* Cria uma sombra abaixo do cabeçalho */
     box-shadow: 0px 5px 15px rgba(0,0,0,.5);
+
+    /* Mantém o cabeçalho sempre visível no topo */
     position: fixed;
-    width: 100%;
+
     top: 0;
+    width: 100%;
+
+    /* Faz o cabeçalho ficar na frente dos outros elementos */
     z-index: 1000;
+
+    /* Ativa o Flexbox para organizar os itens */
     display: flex;
+
+    /* Coloca um item em cada lado */
     justify-content: space-between;
+
+    /* Alinha os itens verticalmente */
     align-items: center;
 }
 
-header img {
-    max-width: 20%;
-    height: auto;
-    display: block;
-    margin: 10px auto;
+
+/* Configuração da imagem do cabeçalho (logo) */
+header img{
+
+    /* Tamanho máximo da imagem */
+    max-width:20%;
+
+    /* Mantém a proporção original */
+    height:auto;
+
+    display:block;
+
+    /* Centraliza a imagem */
+    margin:10px auto;
 }
 
-nav {
-    position: fixed;
-    width: 100%;
-    top: 70px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 10px;
-    z-index: 1001;
+
+/* =====================================================
+   MENU DE NAVEGAÇÃO
+   ===================================================== */
+
+nav{
+
+    /* Menu fixo logo abaixo do cabeçalho */
+    position:fixed;
+
+    width:100%;
+
+    top:70px;
+
+    /* Organiza os links em linha */
+    display:flex;
+
+    justify-content:flex-start;
+
+    align-items:center;
+
+    padding:10px;
+
+    z-index:1001;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    margin-right: 10px;
-    font-weight: bold;
-    transition: .3s;
+
+/* Aparência dos links do menu */
+nav a{
+
+    color:white;
+
+    /* Remove o sublinhado */
+    text-decoration:none;
+
+    padding:10px;
+
+    margin-right:10px;
+
+    font-weight:bold;
+
+    /* Suaviza mudanças ao passar o mouse */
+    transition:.3s;
 }
 
-nav a:hover {
-    color: gold;
+
+/* Cor do link quando o mouse passa por cima */
+nav a:hover{
+
+    color:gold;
 }
 
-section {
-    padding: 20px;
+
+/* =====================================================
+   SEÇÕES DA PÁGINA
+   ===================================================== */
+
+/* Espaçamento interno padrão das seções */
+section{
+
+    padding:20px;
 }
 
-#contato {
-    background: #e6f7ff;
-    padding: 20px;
-    text-align: center;
+
+/* Área de contato */
+#contato{
+
+    background:#e6f7ff;
+
+    padding:20px;
+
+    text-align:center;
 }
 
-#contato h2 {
-    color: #333;
+
+/* Título da área de contato */
+#contato h2{
+
+    color:#333;
 }
 
-#sites-feitos {
-    background: #999;
+
+/* Fundo da seção dos modelos */
+#sites-feitos{
+
+    background:#999;
 }
 
-footer {
-    background: black;
-    color: white;
-    text-align: center;
-    height: 80px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+
+/* =====================================================
+   RODAPÉ
+   ===================================================== */
+
+footer{
+
+    background:black;
+
+    color:white;
+
+    text-align:center;
+
+    height:80px;
+
+    /* Mantém o rodapé fixo na parte inferior */
+    position:fixed;
+
+    bottom:0;
+
+    width:100%;
 }
 
-footer a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
+
+/* Links do rodapé */
+footer a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin:0 10px;
 }
 
-#whatsapp-link img {
-    width: 100%;
-    max-width: 120px;
-    border-radius: 10px;
-    transition: .2s;
+
+/* =====================================================
+   BOTÃO DO WHATSAPP
+   ===================================================== */
+
+#whatsapp-link img{
+
+    width:100%;
+
+    max-width:120px;
+
+    /* Arredonda as bordas */
+    border-radius:10px;
+
+    transition:.2s;
 }
 
-#whatsapp-link img:hover {
-    transform: scale(1.1);
+
+/* Faz a imagem crescer um pouco quando passa o mouse */
+#whatsapp-link img:hover{
+
+    transform:scale(1.1);
 }
 
-/* ========================= */
-/* GALERIA DE MODELOS */
-/* ========================= */
 
+/* =====================================================
+   GALERIA DE MODELOS
+   ===================================================== */
+
+/* Área principal da galeria */
 #site-carousel{
+
     width:95%;
+
     max-width:1400px;
+
     margin:20px auto;
 }
 
+
+/* Container geral */
 .container{
+
     width:100%;
 }
 
+
+/* Grade onde ficam os cartões */
 .modelos{
+
     display:grid;
+
+    /* Cria automaticamente quantas colunas couberem */
     grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+
     gap:25px;
 }
 
+
+/* Cada cartão da galeria */
 .modelo{
-    background:#fff;
+
+    background:white;
+
     border-radius:12px;
+
     overflow:hidden;
+
     box-shadow:0 4px 15px rgba(0,0,0,.15);
+
     transition:.3s;
+
     text-align:center;
+
     padding-bottom:20px;
 }
 
+
+/* Efeito ao passar o mouse */
 .modelo:hover{
+
+    /* Faz o cartão subir um pouco */
     transform:translateY(-5px);
+
+    /* Aumenta a sombra */
     box-shadow:0 12px 25px rgba(0,0,0,.25);
 }
 
+
+/* Imagem do cartão */
 .modelo img{
+
     width:100%;
+
     height:190px;
+
+    /* Recorta a imagem sem deformar */
     object-fit:cover;
+
     display:block;
 }
 
+
+/* Nome do modelo */
 .modelo p{
+
     font-size:18px;
+
     font-weight:bold;
+
     margin:15px 10px;
+
+    /* Garante altura mínima para alinhar todos os cartões */
     min-height:50px;
 }
 
+
+/* Botão do cartão */
 .modelo a{
+
     display:inline-block;
+
     background:black;
+
     color:white;
+
     text-decoration:none;
+
     padding:10px 20px;
+
     border-radius:6px;
+
     transition:.3s;
 }
 
+
+/* Cor do botão quando passa o mouse */
 .modelo a:hover{
+
     background:#444;
 }
 
-/* ========================= */
 
-form {
-    max-width: 400px;
-    margin: 0 auto;
-    text-align: left;
+/* =====================================================
+   FORMULÁRIO
+   ===================================================== */
+
+form{
+
+    max-width:400px;
+
+    margin:0 auto;
+
+    text-align:left;
 }
 
-label {
-    font-weight: bold;
-    margin-bottom: 8px;
-    display: block;
-    color: #333;
+
+/* Texto acima dos campos */
+label{
+
+    font-weight:bold;
+
+    margin-bottom:8px;
+
+    display:block;
+
+    color:#333;
 }
 
+
+/* Campos de texto */
 input,
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+textarea{
+
+    width:100%;
+
+    padding:10px;
+
+    margin-bottom:16px;
+
+    border:1px solid #ccc;
+
+    border-radius:4px;
+
+    box-sizing:border-box;
 }
 
-button {
-    background: #4caf50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    display: block;
-    margin-top: 10px;
+
+/* Botão de enviar */
+button{
+
+    background:#4caf50;
+
+    color:white;
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:4px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    display:block;
+
+    margin-top:10px;
 }
 
-button:hover {
-    background: #45a049;
+
+/* Cor do botão ao passar o mouse */
+button:hover{
+
+    background:#45a049;
 }
 
-#sobre-text-container {
-    max-width: 800px;
-    margin: 0 auto;
+
+/* Limita a largura do texto da seção Sobre */
+#sobre-text-container{
+
+    max-width:800px;
+
+    margin:0 auto;
 }
 
-/* ========================= */
-/* RESPONSIVO */
-/* ========================= */
+
+/* =====================================================
+   RESPONSIVIDADE
+   Essas regras só funcionam em telas menores,
+   como celulares e tablets.
+   ===================================================== */
 
 @media (max-width:768px){
 
+    /* Aumenta a logo para facilitar a visualização */
     header img{
+
         max-width:50%;
     }
 
+    /* Diminui o espaço do menu */
     nav{
+
         padding:5px;
     }
 
+    /* Diminui a fonte dos links */
     nav a{
+
         font-size:14px;
     }
 
+    /* Reduz o espaçamento das seções */
     section{
+
         padding:10px;
     }
 
+    /* Diminui a altura do rodapé */
     footer{
+
         height:60px;
     }
 
+    /* Faz cada cartão ocupar uma linha inteira */
     .modelos{
+
         grid-template-columns:1fr;
     }
 
+    /* Deixa a altura da imagem automática */
     .modelo img{
+
         height:auto;
     }
 
+    /* Permite que o texto ocupe toda a largura da tela */
     #sobre-text-container{
+
         max-width:100%;
+
         padding:0 20px;
     }
 
